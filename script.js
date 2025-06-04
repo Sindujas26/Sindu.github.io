@@ -294,7 +294,21 @@ function resetToDefaults() {
 }
 
 // Initialize when the page loads
-document.addEventListener('DOMContentLoaded', initializePage);
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM Content Loaded');
+    initializePage();
+});
 
 // Debug log to verify script loading
-console.log('Script loaded and running!');
+console.log('Script loaded successfully');
+
+// Add error handling
+window.onerror = function(msg, url, line, col, error) {
+    console.error('Error:', msg, 'URL:', url, 'Line:', line, 'Col:', col, 'Error:', error);
+    return false;
+};
+
+// Add event listener for errors
+window.addEventListener('error', function(e) {
+    console.error('Error event:', e);
+}, true);
