@@ -124,6 +124,116 @@
             overflow: hidden;
         }
 
+        /* Edit Panel Styles */
+        .edit-panel {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            padding: 2rem;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .edit-panel.open {
+            right: 0;
+        }
+
+        .edit-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .edit-section {
+            margin-bottom: 2rem;
+        }
+
+        .edit-section h3 {
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .skill-edit {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .edit-form input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .edit-form button {
+            width: 100%;
+            padding: 1rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .edit-form button:hover {
+            background: #5a69e0;
+        }
+
+        /* Edit Toggle Button */
+        .edit-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1001;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .edit-toggle span {
+            width: 2rem;
+            height: 2px;
+            background: #667eea;
+            border-radius: 1px;
+            transition: all 0.3s ease;
+        }
+
+        /* Edit Mode Indicator */
+        .edit-mode-indicator {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            background: #667eea;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            z-index: 1001;
+        }
+
+        /* URL Info */
+        .url-info {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            max-width: 300px;
+        }
+
         #hero-content {
             position: relative;
             z-index: 2;
@@ -517,7 +627,7 @@
     </section>
 
     <!-- Edit Panel -->
-    <div class="edit-panel hidden">
+    <div id="editPanel" class="edit-panel">
         <div class="edit-content">
             <h2>Edit Mode</h2>
             <form id="edit-form">
@@ -543,16 +653,22 @@
     </div>
 
     <!-- Edit Toggle Button -->
-    <button class="edit-toggle hidden">Edit Mode</button>
+    <button class="mobile-menu-btn edit-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
     <!-- Edit Mode Indicator -->
-    <div class="edit-mode-indicator hidden">
+    <div class="edit-mode-indicator">
         <span>Editing Mode</span>
     </div>
 
     <!-- URL Info -->
-    <div class="url-info hidden">
+    <div class="url-info">
         <p>Add '?edit=true' to URL to enter edit mode</p>
+        <p>Current URL: <span id="view-url"></span></p>
+        <p>Edit URL: <span id="edit-url"></span></p>
     </div>
 
     <script src="script.js"></script>
