@@ -59,14 +59,31 @@ function initializePage() {
 // Toggle edit panel
 function toggleEditPanel() {
     const panel = document.getElementById('editPanel');
-    panel.classList.toggle('open');
-    
-    // Close mobile menu if open
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    if (navLinks && navLinks.classList.contains('show')) {
-        navLinks.classList.remove('show');
-        mobileMenuBtn.classList.remove('active');
+    if (panel) {
+        panel.classList.toggle('open');
+        
+        // Close mobile menu if open
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        if (navLinks && navLinks.classList.contains('show')) {
+            navLinks.classList.remove('show');
+            mobileMenuBtn.classList.remove('active');
+        }
+        
+        // Add touch support for closing
+        if (panel.classList.contains('open')) {
+            document.addEventListener('touchstart', handleTouchOutside, { once: true });
+        } else {
+            document.removeEventListener('touchstart', handleTouchOutside);
+        }
+    }
+}
+
+// Handle touch outside the edit panel
+function handleTouchOutside(e) {
+    const panel = document.getElementById('editPanel');
+    if (panel && !panel.contains(e.target)) {
+        toggleEditPanel();
     }
 }
 
