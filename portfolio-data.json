@@ -1,0 +1,52 @@
+{
+    "name": "Sindu",
+    "title": "Product Manager",
+    "industry": "Technology",
+    "specialty": "Product Management",
+    "role": "Product Manager",
+    "experience": "3+ years",
+    "field": "Technology",
+    "specialization": "Product Strategy",
+    "companies": "Tech Company 1, Tech Company 2",
+    "interest": "Learning new technologies",
+    "skills": [
+        {
+            "name": "Product Strategy",
+            "desc": "Developing and executing product strategies that align with business goals"
+        },
+        {
+            "name": "User Research",
+            "desc": "Conducting user research to inform product decisions"
+        },
+        {
+            "name": "Agile Methodologies",
+            "desc": "Implementing agile practices in product development"
+        },
+        {
+            "name": "Stakeholder Management",
+            "desc": "Building and maintaining relationships with key stakeholders"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Project 1",
+            "desc": "Description of project 1",
+            "link": "#"
+        },
+        {
+            "name": "Project 2",
+            "desc": "Description of project 2",
+            "link": "#"
+        },
+        {
+            "name": "Project 3",
+            "desc": "Description of project 3",
+            "link": "#"
+        }
+    ],
+    "contact": {
+        "email": "your.email@example.com",
+        "linkedin": "https://linkedin.com/in/your-profile",
+        "github": "https://github.com/yourusername"
+    }
+}
