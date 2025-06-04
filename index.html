@@ -402,6 +402,159 @@
     </style>
 </head>
 <body>
-    <!-- Your HTML content here -->
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <h1>Sinduja Senthil Kumar</h1>
+            </div>
+            <ul class="nav-items">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Product Manager & AI Enthusiast</h1>
+            <p>Transforming ideas into impactful products through strategic vision and data-driven decisions</p>
+            <a href="#contact" class="cta-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <p>I am a passionate Product Manager with expertise in AI-driven product development. My role involves:</p>
+            <ul>
+                <li>Leading cross-functional teams to deliver innovative solutions</li>
+                <li>Defining product vision and strategy</li>
+                <li>Conducting market research and competitive analysis</li>
+                <li>Collaborating with engineering teams on AI/ML implementations</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="section-header">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Product Management</h3>
+                <p>Strategic planning, roadmap development, stakeholder management</p>
+            </div>
+            <div class="skill-card">
+                <h3>AI/ML</h3>
+                <p>Machine learning, data analysis, algorithm implementation</p>
+            </div>
+            <div class="skill-card">
+                <h3>Technical Skills</h3>
+                <p>Python, JavaScript, SQL, Git, REST APIs</p>
+            </div>
+            <div class="skill-card">
+                <h3>Business Acumen</h3>
+                <p>Market analysis, ROI calculation, product pricing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>AI-Powered Chatbot</h3>
+                <p>Developed a conversational AI system using NLP and machine learning</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Product Analytics Dashboard</h3>
+                <p>Created a real-time analytics dashboard for product performance tracking</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+            <div class="project-card">
+                <h3>Customer Segmentation Tool</h3>
+                <p>Implemented ML algorithms for customer behavior analysis</p>
+                <a href="#" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="section-header">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <p>Let's connect and discuss how we can work together!</p>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/sindujas26" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/Sindujas26" target="_blank">GitHub</a>
+                    <a href="mailto:sindusudhan62@gmail.com">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Panel -->
+    <div class="edit-panel hidden">
+        <div class="edit-content">
+            <h2>Edit Mode</h2>
+            <form id="edit-form">
+                <div class="edit-section">
+                    <h3>Basic Info</h3>
+                    <input type="text" id="edit-name" placeholder="Name">
+                    <input type="text" id="edit-title" placeholder="Title">
+                </div>
+                <div class="edit-section">
+                    <h3>Skills</h3>
+                    <div class="skill-edit">
+                        <input type="text" id="edit-skill1-name" placeholder="Skill 1">
+                        <input type="text" id="edit-skill1-desc" placeholder="Description">
+                    </div>
+                    <div class="skill-edit">
+                        <input type="text" id="edit-skill2-name" placeholder="Skill 2">
+                        <input type="text" id="edit-skill2-desc" placeholder="Description">
+                    </div>
+                </div>
+                <button type="button" onclick="saveChanges()">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Edit Toggle Button -->
+    <button class="edit-toggle hidden">Edit Mode</button>
+
+    <!-- Edit Mode Indicator -->
+    <div class="edit-mode-indicator hidden">
+        <span>Editing Mode</span>
+    </div>
+
+    <!-- URL Info -->
+    <div class="url-info hidden">
+        <p>Add '?edit=true' to URL to enter edit mode</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
